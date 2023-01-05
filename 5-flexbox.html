@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>inline</title>
+
+    <style>
+      body {
+        height: 100vh;
+        /* viewport height(vh) : 화면 크기에 따라 바뀜, 1000px로 해도 작동은 함 */
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: center;
+        /* flex-direction이 colummn에 있으면 주축에 적용되는 justify-content가 수직으로 적용됨 */
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      /* body: 부모 엘리먼트, ~~~reverse: 순서를 뒤집을 수 있음 */
+      div {
+        display: flex;
+        justify-content: center;
+        flex-direction: center;
+        align-items: center;
+        width: 300px;
+        font-size: 20px;
+        color: blue;
+        height: 300px;
+        background-color: palegoldenrod;
+      }
+      /* div: 자식 엘리먼트 */
+      #second {
+        background-color: teal;
+      }
+    </style>
+  </head>
+  <body>
+    <div>1</div>
+    <div id="second">2</div>
+    <div>3</div>
+  </body>
+</html>

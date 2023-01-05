@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Pseudo Selectors</title>
+    <style>
+      body {
+        height: 1000hv;
+        margin: 50px;
+        /* width 크기에 따라 span이 줄바꿈 되기도 함 ? */
+      }
+
+      div {
+        height: 150px;
+        background-color: wheat;
+        position: relative;
+      }
+
+      div:first-child {
+        background-color: tomato;
+      }
+
+      div:last-child {
+        background-color: white;
+      }
+      span {
+        background-color: tomato;
+      }
+      span:nth-child(odd) {
+        background-color: teal;
+      }
+      /* span:nth-child - 짝수: even, 홀수: odd, 2n+1,3n+1, 4n+1 등등도 가능 */
+      span {
+        background-color: yellowgreen;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      p span {
+        color: purple;
+        /* text-decoration: none; 도 가능 */
+      }
+      /* =div p span */
+      div > span {
+        text-decoration: underline;
+      }
+      /*div 바로 밑에 있는 span에 언더라인을 주고 싶을때, 'div span'이라고 사용하지 않고 'div > span'라 사용,
+        <p></p> <span></span>의 형태에서 'p+span'을 사용하면, p 다음에 오는 span에 적용됨(안에 있는 것에 적용하는 것이 아니라, 그 뒤에 나오는 것에 적용됨*/
+
+      input {
+        border: 1px solid red;
+      }
+      /* = input:optional {
+        border: 1px solid wheat;
+      }*/
+      input:required {
+        border-color: blue;
+        /* 테두리색, class 추가 없이 form에서 required 필드를 보여줄 때 많이 사용*/
+      }
+      input[type="password"] {
+        background-color: thistle;
+      }
+      /*input[placeholder="username"] {
+        background-color: thistle;} */
+      input[placeholder~="name"] {
+        background-color: pink;
+      }
+      /* '~=' 'name'을 포함한 모든 input의 값 변경 */
+      input:focus {
+        background-color: whitesmoke;
+      }
+      a:visited {
+        color: tomato;
+      }
+      a:hover {
+        color: teal;
+      }
+      a:focus {
+        color: turquoise;
+      }
+      form {
+        border: 1px solid salmon;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+      }
+      form:focus-within {
+        border-color: seagreen;
+      }
+      form:hover input:focus {
+        background-color: sienna;
+        /* form이 hover가 되어있고 그 안에 input이 있을때 적용 */
+      }
+    </style>
+  </head>
+  <body>
+    <a href="http://apple.com">Go to apple</a>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <br />
+    <br />
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <span>hello</span>
+    <br />
+    <br />
+    <div>
+      <span> hello</span>
+      <p>아주 긴 문자아아아아앙 <span>hello</span></p>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div>
+      <form>
+        <input type="text" placeholder="First name" />
+        <input type="text" placeholder="Last name" />
+        <input type="password" required placeholder="password" />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <input type="text" name="" id="" />
+        <input type="text" name="" id="" />
+        <input type="text" name="" id="" />
+      </form>
+    </div>
+  </body>
+</html>

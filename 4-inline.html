@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>inline</title>
+
+    <style>
+      body {
+        margin: 20px;
+      }
+      div {
+        display: inline-block;
+        /* display: inline-block은 너무 old, 정해진 형식이 없음, 반응형 디자인 불가 */
+        width: 50px;
+        height: 50px;
+        background-color: palegoldenrod;
+      }
+      .btn {
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+      /* botton의 약자 */
+      .teal {
+        background-color: teal;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+      .tomato {
+        background-color: tomato;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+      /* #tomato=id="tomato" 
+      .tomato=class="tomato"; */
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <span class="btn teal">hello</span>
+    <span class="btn tomato">hello</span>
+    <span class="btn teal">hello</span>
+    <span class="btn tomato">hello</span>
+    <span class="btn teal">hello</span>
+    <span class="btn tomato">hello</span>
+    <span class="btn teal">hello</span>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Animation</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        height: 20vh;
+      }
+      @keyframes superSexycoinFlip {
+        0% {
+          transform: rotateY(0);
+        }
+        25% {
+          transform: scale(2);
+        }
+
+        50% {
+          transform: rotateY(180deg) translateY(100px);
+          border-radius: 0px;
+          border-color: tomato;
+          opacity: 0;
+        }
+
+        75% {
+          transform: scale(5);
+          border-radius: 25px;
+        }
+        100% {
+          transform: rotateY(0) translateY(0px);
+        }
+        /*   from {
+          transform: rotateY(0);
+        }
+        to {
+          transform: rotateX(360deg);
+        } 
+        step은 가지고 싶은 만큼 가질 수 있음(0%, 25%, 50%, 75%, 100% 등) */
+      }
+      img {
+        border: 5px solid black;
+        border-radius: 50%;
+        animation: superSexycoinFlip 5s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <image src="img/dog.jpg"></image>
+  </body>
+</html>

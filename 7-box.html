@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>BOX</title>
+    <link href="style.css" rel="stylesheet" />
+
+    <style>
+      * {
+         border: 2px dashed black;
+      }
+      html {
+        background-color: tomato;
+      }
+      body {
+        padding: 15px;
+        margin: 20px;
+        background-color: thistle;
+      }
+      div {
+        padding: 20px;
+        border: 2px solid black;
+      }
+      #first {
+        height: 200px;
+        width: 200px;
+        background-color: whitesmoke;
+      }
+      #second {
+        height: 150px;
+        width: 150px;
+        background-color: teal;
+      }
+      #third {
+        height: 100px;
+        width: 100px;
+        background-color: wheat;
+      }
+      #fourth {
+        height: 50px;
+        width: 50px;
+        background-color: blueviolet;
+      }
+
+      #fourth {
+        border: 2px dashed black !important;
+      }
+
+      .love {
+        font-weight: lighter !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="first">
+      <div id="second">
+        <div id="third">
+          <div id="fourth">
+            <span>Hello</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <span>hello</span>
+    <header>hi</header>
+    <p>
+      세상에서 <span class="love" style="font-weight: bold">지현이</span>가 제일
+      좋아
+      <span style="color: red">♥</span>
+    </p>
+  </body>
+</html>

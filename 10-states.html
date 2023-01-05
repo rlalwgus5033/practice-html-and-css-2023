@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>states</title>
+    <style>
+      :root {
+        --main-color: #fcce00;
+        --default-border: 1px solid var(--main-color);
+      }
+      /* --main-color를 document root에 저장하는것, 색깔 수정 시 --main-color 만 변경해주면 전체가 색깔 변경 가능 */
+      body {
+        height: 1000hv;
+        margin: 50px;
+      }
+
+      input::placeholder {
+        color: yellowgreen;
+      }
+      /* placeholder에 대한 설정값을 변경하고 싶을때, :: 를 사용*/
+      p::selection {
+        color: white;
+        background-color: yellowgreen;
+      }
+      p {
+        background-color: var(--main-color);
+      }
+      a {
+        color: var(--main-color);
+        border: var(--main-color);
+      }
+      /* 글자를 스크랩 했을때 보여짐, first letter */
+    </style>
+  </head>
+  <body>
+    <form>
+      <input type="text" placeholder="name" />
+    </form>
+    <p>very long paragraph</p>
+    <a href="www.apple.cpm">Go to apple</a>
+  </body>
+</html>

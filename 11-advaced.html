@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <title>Transition</title>
+    <style>
+      a {
+        color: white;
+        background-color: tomato;
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 55px;
+        transition: all 5s ease-in-out;
+        /* transition: background-color 5s ease-in-out, color 5s ease ease-in-out;
+              각각 바꾸고 싶으면 위와 같이 작성, cubic-bezier(.17,.67,.83,.67)*/
+      }
+      /* 1. transition을 사용하여 무언가를 바꾸고 싶을때에는, 그 요소가 a:hover{ } 에도 입력해야함.
+             2. transition은 a:hover{  } 안에 있으면 안됨. 가장 먼저 생성된 root에 있어야함*/
+      a:hover {
+        border-radius: 20px;
+        color: tomato;
+        background-color: blue;
+      }
+      img {
+        border: 5px solid black;
+        border-radius: 50%;
+        transition: transform 5s ease-in-out;
+        /* transform: rotateY(50deg) rotateX(50deg) rotateZ(10deg); */
+        /* transform: scaleY(2, 2); */
+        /* transform:translateX(-10px) img 안에서 img의 값은 변형시키지만(픽셀변형), 다른 요소는 변형시키지 않음
+              즉, 다른 요소의 box를 변형시키지 않고, 원하는 요소를 이동시키기 위해 사용 */
+      }
+      img:hover {
+        transform: rotateX(365deg) scale(0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#"> GO home</a>
+    <image src="img/dog.jpg"></image>
+  </body>
+</html>
